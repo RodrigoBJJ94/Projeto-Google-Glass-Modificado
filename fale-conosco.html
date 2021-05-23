@@ -8,9 +8,16 @@
 <script src="_javascript/funcoes.js"></script>
 <script>
     function calc_total() {
-        var qtd = Number(document.getElementById('cQtd').value)
-        tot = qtd * 1500
-        document.getElementById('cTot').value = tot
+        var preto = Number(document.getElementById('cPreto').value) 
+        totPreto = preto * 1500    
+            document.getElementById('cPretoV').value = totPreto + ',00'
+        var branco = Number(document.getElementById('cBranco').value) 
+        totBranco = branco * 1600    
+            document.getElementById('cBrancoV').value = totBranco + ',00'
+        var vermelho = Number(document.getElementById('cVermelho').value) 
+        totVermelho = vermelho * 1650    
+            document.getElementById('cVermelhoV').value = totVermelho + ',00'
+            document.getElementById('cTotal').value = totPreto + totBranco + totVermelho + ',00'
     }
 </script>
 </head>
@@ -45,9 +52,9 @@
             </hgroup>
         </header>
 
-        <form  method="post" id="fContato" action="mailto:contato@cursoemvideo.com" oninput="calc_total()">
+        <form  method="post" id="fContato" oninput="calc_total()">
             <fieldset id="usuario"><legend>Identificação do Usuário</legend>
-                <p><label for="cNome">Nome: </label><input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"></p> 
+                <p><label for="cNome">Nome: </label><input type="text" name="tNome" id="cNome" size="30" maxlength="30" placeholder="Nome Completo"></p> 
                 <p><label for="cSenha">Senha: </label><input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 dígitos"></p> 
                 <p><label for="cMail">E-mail: </label><input type="email" name="tMail" id="cMail" size="20" maxlength="40"><p> 
                 <fieldset id="sexo"><legend>Sexo:</legend>
@@ -60,27 +67,9 @@
             <fieldset id="endereco"><legend>Endereço do Usuário</legend>
                 <p><label for="cRua">Logradouro: </label><input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Avenida..."></p>    
                 <p><label for="cNum">Número: </label><input type="number" name="tNum" id="cNum" min="0" max="9999"></p>    
-                <p><label for="cEst">Estado: </label><select name="tEst" id="cEst"> 
-                    <optgroup label="Região Sudeste">
-                    <option value="RJ">Rio de Janeiro</option> 
-                    <option value="SP">São Paulo</option>  
-                    <option value="MG">Minas Gerais</option> 
-                </optgroup>
-                <optgroup label="Região Sul"> 
-                    <option value="PR">Paraná</option>     
-                    <option value="SC">Santa Catarina</option> 
-                    <option value="RS" selected>Rio Grande do Sul</option>
-                </optgroup>
-                </select></p> 
+                <p><label for="cEst">Estado: </label><input type="text" name="tEst" id="cEst"></p> 
                 <p><label for="cCid">Cidade: </label><input type="text" name="tCid" 
-                     id="cCid" size="20" maxlength="40" placeholder="Sua Cidade" 
-                     list="cidade"></p>
-                     <datalist id="cidade">
-                        <option value="Rio de Janeiro"></option>
-                        <option value="Nova Iguaçu"></option>
-                        <option value="Niterói"></option>
-                        <option value="Belford Roxo"></option>
-                     </datalist>   
+                     id="cCid" size="20" maxlength="40"></p>
             </fieldset>
             <fieldset id="mensagem"><legend> Mensagem do Usuário</legend>
                 <p><label for="cUrg">Grau de Urgência: Mín</label><input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Máx</p> 
@@ -88,9 +77,13 @@
             </fieldset>
             <fieldset id="pedido"><legend>Quero um Google Glass</legend>
                 <p><input type="checkbox" name="tPed" id="cPed" checked><label for="cPed">Gostaria de adquirir um Google Glass quando disponível </label></p> 
-                <p><label for="cCor">Cor: </label><input type="color" name="tCor" id="cCor"></p>
-                <p><label for="cQtd">Quantidade: </label><input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0"></p> 
-                <p><label for="cTot">Preço Total: R$ </label><input type="text" name="tTot" id="cTot" placeholder="Total a Pagar" readonly></p> 
+                <p><label for="cPreto"> Preto - US$ 1500.00 </label><input type="number" name="tPreto" id="cPreto" min="0" max="5"></p>
+                <p><label for="cBranco"> Branco - US$ 1600.00 </label><input type="number" name="tBranco" id="cBranco" min="0" max="5"></p>                   
+                <p><label for="cVermelho"> Vermelho - US$ 1650.00 </label><input type="number" name="tVermelho" id="cVermelho" min="0" max="5"></p>   
+                <p><label for="cPretoV">Preço - Preto, US$ </label><input type="text" name="tPretoV" id="cPretoV" readonly></p> 
+                <p><label for="cBrancoV">Preço - Branco, US$ </label><input type="text" name="tBrancoV" id="cBrancoV" readonly></p> 
+                <p><label for="cVermelhoV">Preço - Vermelho, US$ </label><input type="text" name="tVermelhoV" id="cVermelhoV" readonly></p> 
+                <p><label for="cTotal">Preço Total, US$ </label><input type="text" name="tTotal" id="cTotal" readonly></p> 
             </fieldset>
 
             <input type="submit" value="Enviar">
