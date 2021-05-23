@@ -34,24 +34,24 @@ header#cabecalho img#icone {
     top: 50px;
 }
 header#cabecalho {
-    border-bottom: 1px #606060 solid;
+    border-bottom: 1px black solid;
     height: 150px;
-    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
+    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 90px;
 }
 header#cabecalho h1 {
     font-family: 'FonteLogo', sans-serif;
     font-size: 30pt;
-    color: #606060;
+    color: #000000;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.603);
     padding: 0px;
     margin-bottom: 0px;
 }
 header#cabecalho h2 {
-    font-family: 'Titillium Web', sans-serif;
-    color: #888888;
-    font-size: 15pt;
+    font-family: 'FonteLogo', sans-serif;
+    font-size: 20pt;
+    color: #19191a;
     padding: 0px;
-    margin-top: 0px;
+    margin-top: 5px;
 }
 figure.foto-legenda {
     position: relative;
@@ -89,13 +89,13 @@ nav#menu ul {
 }
 nav#menu li {
     display: inline-block;
-    background-color: #dddddd;
+    background-color: #d5e7f8;
     padding: 10px;
     margin: 2px;
     transition: background-color 1s;
 }
 nav#menu li:hover {
-    background-color: #606060;
+    background-color: #d5e7f8;
 }
 nav#menu h1 {
     display: none;
@@ -116,31 +116,28 @@ section#corpo {
 }
 article#noticia-principal h2 {
     font-size: 13pt;
-    color: #606060;
-    background-color: #dddddd;
+    color: black;
+    background-color: #d5e7f8;
     padding: 5px 0px 5px 10px;
     margin: 10px 0px 10px 0px;
 }
 header#cabecalho-artigo h1 {
     font-family: 'FonteLogo', sans-serif;
     font-size: 20pt;
-    color: #606060;
+    color: #19191a;
     margin-bottom: 0px;
     margin-top: 0px;
 }
 header#cabecalho-artigo h2 {
     font-size: 13pt;
-    color: #cecece;
+    color: #19191a;
     background-color: #ffffff;
     margin: 0px;
     
 }
 header#cabecalho-artigo h3 {
     font-size: 12pt;
-    color: #606060;
-}
-.direita {
-    text-align: right;
+    color: #19191a;
 }
 table#tabelaspec {
     border: 1px solid #606060;
@@ -155,16 +152,16 @@ table#tabelaspec td {
     vertical-align: middle;
 }
 table#tabelaspec td.colunaesquerda {
-    color: #ffffff;
-    background-color: #606060;
+    color: white;
+    background-color: black;
     vertical-align: top;
     font-weight: bold;
 }
 table#tabelaspec td.colunadireita {
-    background-color: #cecece;
+    background-color: #d5e7f8;
 }
 table#tabelaspec caption {
-    color: #888888;
+    color: black;
     font-size: 13pt;
     font-weight: bolder;
 }
@@ -179,7 +176,7 @@ aside#lateral {
     display: block;
     width: 350px;
     float: right;
-    background-color: #dddddd;
+    background-color: #d5e7f8;
     padding: 10px;
     margin-top: 10px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -187,11 +184,11 @@ aside#lateral {
 aside#lateral h1 {
     font-family: 'FonteLogo', sans-serif;
     font-size: 20pt;
-    color: #606060;
+    color: #19191a;
     margin-top: 0px;
 }
 aside#lateral h2 {
-    background-color: #606060;
+    background-color: #19191a;
     font-size: 13pt;
     color: #ffffff;
     padding: 5px;
